@@ -7,18 +7,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView tvNumb;
-    private Button btnPlus;
     private int chiffre;
-    private String test;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvNumb = (TextView) findViewById(R.id.tvNumb);
-        btnPlus = (Button) findViewById(R.id.btnPlus);
-        btnPlus.setOnClickListener(btnclick);
         chiffre = 0;
 
     }
@@ -27,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener btnclick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            chiffre = chiffre + 1;
-            tvNumb.setText("Nombre : " + String.valueOf(chiffre));
 
         }
 

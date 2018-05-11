@@ -55,7 +55,7 @@ class Lines {
 public class Dessin extends View implements View.OnTouchListener{
     LinkedList<Cercle> cercles;
     LinkedList<Lines> lines;
-    StringBuilder grille = new StringBuilder("001700509573024106800501002700295018009400305652800007465080071000159004908007053");
+    StringBuilder grille = new StringBuilder("008203500009670408346050702430010059967005001000496203280034067703500904004107020");
     StringBuilder values = new StringBuilder(grille);
 
 
@@ -100,11 +100,11 @@ public class Dessin extends View implements View.OnTouchListener{
 
         for (int i =0; i<9;i++){
             for (int j=0;j<9;j++){
-                float margei =i+Float.parseFloat(String.valueOf(marge));
-                float margej =j+Float.parseFloat(String.valueOf(marge));
+                float step1 =i+Float.parseFloat(String.valueOf(marge));
+                float step2 =j+Float.parseFloat(String.valueOf(marge));
                 if (grille.charAt(i+9*j) != '0'){
                     paint.setTextSize(50);
-                    canvas.drawText(""+ grille.charAt(i+9*j),(cell)*(margei),(cell)*(margej)+30,paint);
+                    canvas.drawText(""+ grille.charAt(i+9*j),(cell)*(step1),(cell)*(step2)+30,paint);
                 }
             }
         }

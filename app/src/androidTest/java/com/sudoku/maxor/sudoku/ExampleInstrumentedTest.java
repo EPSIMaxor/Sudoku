@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.sudoku.maxor.sudoku", appContext.getPackageName());
+        assertEquals("com.grille.maxor.grille", appContext.getPackageName());
     }
 }
